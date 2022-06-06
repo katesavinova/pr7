@@ -44,7 +44,7 @@ public class TGroup {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
-
+//запись производится в формате '1', 'Екатерина', 'Савинова', 'ПМИб'
     @Override
     public String toString() {
         return "TGroup{" +

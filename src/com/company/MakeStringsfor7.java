@@ -1,7 +1,7 @@
 package com.company;
 
 public class MakeStringsfor7 {
-
+//вернуть строку (число оператор число = результат)
     public static String getStringWith2Int (int integer1, int integer2, Operations operation) {
         return new StringBuilder()
                 .append(integer1)
@@ -15,13 +15,15 @@ public class MakeStringsfor7 {
     }
 
     public static String replaceEqualsCharByInsert(String str) {
+        // Замените символ “=” на слово “равно”
         int index = str.indexOf("=");
         return new StringBuilder(str)
                 .deleteCharAt(index)
                 .insert(index, "равно")
                 .toString();
     }
-
+//Замените символ “=” на слово “равно”. Используйте методы
+//StringBuilder.replace().
     public static String replaceEqualsCharByReplace (String str) {
         int index = str.indexOf("=");
         return new StringBuilder(str)

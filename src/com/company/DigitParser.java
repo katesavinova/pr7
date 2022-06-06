@@ -1,17 +1,17 @@
 package com.company;
 
 public class DigitParser {
-    private String countryCode;
-    private String phoneNumber;
+    private String countryCode;//код города
+    private String phoneNumber;//номер телефона
 
 
     public DigitParser(String input) {
-        this.phoneNumber = input.substring(input.length() - 10);
-        System.out.println("second = " + input.charAt(0));
-        if (input.charAt(0) == '8') {
+        this.phoneNumber = input.substring(input.length() - 10);//номер теелфона без учета 1й цифры
+        System.out.println("Первый символ номера = " + input.charAt(0));//вывести первое число
+        if (input.charAt(0) == '8') {//если первая 8, пишем код 7
             this.countryCode = "7";
         } else {
-            this.countryCode = input.substring(1, input.length() - 10);
+            this.countryCode = input.substring(1, input.length() - 10);//иначе первый символ номера
         }
     }
 
@@ -32,8 +32,9 @@ public class DigitParser {
     }
 
     public void printPhoneNumber() {
+        //+код(3цифры)-3цифры-4цифры
         System.out.printf(
-                "\n+%s(%s)-%s-%s\n",
+                "\n+%s(%s)-%s-%s",
                 this.countryCode,
                 this.phoneNumber.substring(0, 3),
                 this.phoneNumber.substring(3, 6),

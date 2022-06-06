@@ -1,20 +1,21 @@
 package com.company;
 
 public class TStudent {
-    private String studentId;
-    private String firstName;
-    private String lastName;
-    private String groupId;
-    private Integer numberOfDebt;
-
+    private String studentId;//код студента
+    private String firstName;//имя
+    private String lastName;//фамилия
+    private String groupId;//код группы
+    private Integer numberOfDebt;//число долгов
+//конструктор принимает студента
     public TStudent(final String inputStudent) {
-        if (inputStudent == null || inputStudent.isEmpty()) {
-            throw new RuntimeException("Incorrect info!");
+        if (inputStudent == null || inputStudent.isEmpty()) {//если студент пустое значение
+            throw new RuntimeException("Некорректный ввод!");
         }
-        final String[] studentInfo = inputStudent.split(", ");
+        final String[] studentInfo = inputStudent.split(", ");//разделить информацию запятой
         if (studentInfo.length != 5) {
-            throw new RuntimeException("Some student's data is not exist!");
+            throw new RuntimeException("Некоторые данные студента не существуют!");
         }
+        //вносим данные в поля из массива студента
         this.studentId = studentInfo[0];
         this.firstName = studentInfo[1];
         this.lastName = studentInfo[2];

@@ -10,6 +10,8 @@ public class StringServicefor8 {
         int lastIndex = 0;
         int index;
         while (buffer.indexOf(FIND_STRING, lastIndex) != -1) {
+            //Метод indexOf(String str, int fromIndex) возвращает индекс в этой строке
+            // первого вхождения указанной подстроки FIND_STRING, начиная с указанного индекса.
             int bufferIndex = buffer.indexOf(FIND_STRING, lastIndex);
             if (bufferIndex == -1)
                 break;

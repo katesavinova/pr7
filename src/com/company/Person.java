@@ -9,7 +9,11 @@ public class Person {
 
     public Person(String input) {
         final String[] array = input.split(" ");
-        if (array.length > 0 && array.length < 4) {
+        if (array.length > 0 && array.length < 4) {//полное имя три слова
+            //substring - Возвращает строку, которая является подстрокой этой строки.
+            // Подстрока начинается с указанного beginIndex и продолжается до символа с индексом endIndex - 1.
+            // Таким образом, длина подстроки равна endIndex-beginIndex.
+            //верхним регистром первая буква+ нижним регистром подстроку остальные буквы
             this.surname = array[0].substring(0, 1).toUpperCase(Locale.ROOT) + array[0].toLowerCase(Locale.ROOT).substring(1);
             if (array.length == 3) {
                 this.name = array[1];
